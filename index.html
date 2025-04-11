@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitesh Metha</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        
+        .resume-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 25px 40px;
+        }
+        
+        /* Header styling */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 1px;
+            color: #000000;
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            margin-top: 5px;
+            color: #000000;
+        }
+        
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .social-link {
+            color: #000000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .social-link:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icon {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-right: 2px;
+            fill: #000000;
+        }
+        
+        /* Section styling */
+        .section {
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        
+        /* Summary styling */
+        .summary {
+            font-size: 12px;
+            text-align: justify;
+            margin-bottom: 15px;
+            color: #000000;
+        }
+        
+        /* Expertise styling */
+        .expertise-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 15px 0;
+        }
+        
+        .expertise-item {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 3px;
+            font-size: 12px;
+            text-align: justify;
+            color: #000000;
+        }
+        
+        .expertise-item:before {
+            content: "• ";
+            position: absolute;
+            left: 0;
+            color: #000000;
+        }
+        
+        .expertise-category {
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        /* Experience styling */
+        .entry {
+            margin-bottom: 12px;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        
+        .org-name {
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0;
+            color: #000000;
+        }
+        
+        .location {
+            font-style: italic;
+            font-size: 12px;
+            text-align: right;
+            color: #000000;
+        }
+        
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .position {
+            font-style: italic;
+            font-size: 12px;
+            color: #000000;
+        }
+        
+        .date {
+            font-size: 12px;
+            text-align: right;
+            color: #000000;
+        }
+        
+        .job-description {
+            font-size: 12px;
+            margin-top: 2px;
+            margin-bottom: 4px;
+            text-align: justify;
+            color: #000000;
+        }
+        
+        .achievements {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 5px 0 0 0;
+        }
+        
+        .achievement-item {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 3px;
+            font-size: 12px;
+            text-align: justify;
+            color: #000000;
+        }
+        
+        .achievement-item:before {
+            content: "• ";
+            position: absolute;
+            left: 0;
+            color: #000000;
+        }
+        
+        /* Skills styling */
+        .skills-content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 12px;
+        }
+        
+        .skills-row {
+            display: flex;
+            margin-bottom: 3px;
+        }
+        
+        .skills-category {
+            font-weight: bold;
+            width: 170px;
+            flex-shrink: 0;
+            color: #000000;
+        }
+        
+        .skills-list {
+            flex-grow: 1;
+            color: #000000;
+        }
+        
+        /* Print styling */
+        @media print {
+            body {
+                background-color: #ffffff;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+            
+            @page {
+                margin: 0.5in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1 class="name">MITESH METHA</h1>
+            <div class="contact-info">
+                <div class="contact-row">
+                    <span>miteshmehta2018@gmail.com</span>
+                    <span>•</span>
+                    <span>Maharashtra, India</span>
+                    <span>•</span>
+                    <a href="https://github.com/Meetmetha" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Meetmetha
+                    </a>
+                    <span>•</span>
+                    <a href="https://x.com/miteshmetha" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        miteshmetha
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+            <div class="summary">
+                Web3-native engineer with 3+ years of hands-on experience in smart contracts, cross-chain architecture, and AI-integrated blockchain infrastructure. Co-founded a multichain bridging protocol (8+ chains, $5M+ testnet TVL, self-funded mainnet). Proven ability to take DeFi and L2 protocols from idea to production at scale.
+            </div>
+        </div>
+        
+        <!-- Core Technical Expertise -->
+        <div class="section">
+            <h2 class="section-title">CORE TECHNICAL EXPERTISE</h2>
+            <ul class="expertise-list">
+                <li class="expertise-item"><span class="expertise-category">Smart Contract Engineering:</span> Gas-optimized Solidity, modular architecture, security-hardened design</li>
+                <li class="expertise-item"><span class="expertise-category">Protocol Design:</span> Cross-chain messaging, Layer 2 rollups, AVS integrations</li>
+                <li class="expertise-item"><span class="expertise-category">AI-Web3 Fusion:</span> On-chain validation systems, decentralized compute, data attestation layers</li>
+                <li class="expertise-item"><span class="expertise-category"> Chain Ecosystems:</span> EVM and L2's, Solana, Hyperliquid, Aptos, Movement(Aptos)</li>
+                <li class="expertise-item"><span class="expertise-category">Team & Product Leadership:</span> System architecture, team scaling, DevOps pipelines, technical roadmap planning</li>
+            </ul>
+        </div>
+        
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+            
+            <!-- Gasyard.fi -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">GASYARD.FI</div>
+                    <div class="location">Remote</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Co-Founder & Lead Smart Contract Engineer</div>
+                    <div class="date">January 2023 - June 2025</div>
+                </div>
+                <div class="job-description">
+                    Co-founded and scaled a production-grade cross-chain bridge supporting major L1s and L2s, leading architecture, development, and operations.
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item"><span class="expertise-category">Protocol Development:</span> Architected and deployed comprehensive bridging contracts across 8+ blockchain networks, achieving seamless cross-chain asset transfers with minimal latency</li>
+                    <li class="achievement-item"><span class="expertise-category">Product Evolution:</span> Shipped three major protocol versions—V1 and V2 to mainnet public release, and V3 with advanced Gas-on-Demand functionality and monetization framework</li>
+                    <li class="achievement-item"><span class="expertise-category">Developer Tooling:</span> Built and launched the Gasyard SDK, powering integrations with external protocols</li>
+                    <li class="achievement-item"><span class="expertise-category">Liquidity Management:</span> Deployed and managed core mainnet liquidity, rebalancing, alongside driving testnet TVL to over $5M+</li>
+                    <li class="achievement-item"><span class="expertise-category">Team Leadership:</span> Scaled and led a 4-person development team, establishing effective workflows for frontend, backend, and cross-chain deployment processes</li>
+                </ul>
+            </div>
+            
+            <!-- PlayAI.Network -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">PLAYAI.NETWORK</div>
+                    <div class="location">Bangalore, India</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Senior Smart Contract Developer</div>
+                    <div class="date">April 2023 - Present</div>
+                </div>
+                <div class="job-description">
+                    Established foundational Web3 infrastructure for decentralized AI processing with Layer 2 rollups using OPStack and EigenLayer AVS integration.
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item"><span class="expertise-category">AI-Blockchain Architecture:</span> Architected the interaction framework between Web3 and AI, enhancing the integration and functionality of both technologies</li>
+                    <li class="achievement-item"><span class="expertise-category">NFT Development:</span> Designed and deployed the PlayAI Collective NFT campaign, enabling decentralized contributions to the platform</li>
+                    <li class="achievement-item"><span class="expertise-category">Decentralized Node Management:</span> Designed and deployed the PlayAI Node License Key NFT Contract system, enabling permissioned access to network resources</li>
+                    <li class="achievement-item"><span class="expertise-category">Data Validation Architecture:</span> Developed PlayAI Node architecture for pre-validation of raw data, reducing invalid submissions by 40%</li>
+                    <li class="achievement-item"><span class="expertise-category">Layer 2 Implementation:</span> Successfully integrated EigenLayer AVS (at POC stage) for decentralized attestation and validation of AI training data</li>
+                    <li class="achievement-item"><span class="expertise-category">Protocol Partnerships:</span> Played a crucial role in core-level decision-making, finalizing technical partnerships with external Web3 protocols to enhance platform capabilities</li>
+                </ul>
+            </div>
+            
+            <!-- DeHidden -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">DEHIDDEN</div>
+                    <div class="location">Bangalore, India</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Technical Product Manager</div>
+                    <div class="date">December 2021 - December 2022</div>
+                </div>
+                <div class="job-description">
+                    Led Web3 product development across ~15 client projects, including partnerships with Coinbase, Flipkart, Mercedes, and major industry conferences.
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item"><span class="expertise-category">Architecture Leadership:</span> Orchestrated end-to-end technical architecture spanning frontend, backend, smart contracts, and DevOps for all client engagements</li>
+                    <li class="achievement-item"><span class="expertise-category">Client Technical Interface:</span> Served as primary technical liaison, translating complex blockchain concepts into accessible business solutions</li>
+                    <li class="achievement-item"><span class="expertise-category">Quality Assurance:</span> Drove critical technical decisions for bug resolution and code improvements, resulting in 30% reduction in post-deployment issues</li>
+                    <li class="achievement-item"><span class="expertise-category">Team Development:</span> Mentored junior developers and conducted technical hiring assessments, growing team capabilities by 4 new hires</li>
+                </ul>
+            </div>
+            
+            <!-- MedzGo -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">MEDZGO</div>
+                    <div class="location">Remote</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Senior Backend Developer</div>
+                    <div class="date">May 2021 - December 2021</div>
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item">Implemented secure telemedication infrastructure with Dyte.io Server API, enabling HIPAA-compliant video consultations</li>
+                    <li class="achievement-item">Developed real-time communication using WebSockets with Pusher, reducing message delivery latency by 65%</li>
+                    <li class="achievement-item">Built core authentication module with JWT and multi-user ACL, ensuring secure access control across the platform</li>
+                </ul>
+            </div>
+            
+            <!-- Aiisma -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">AIISMA</div>
+                    <div class="location">Remote</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Software Developer</div>
+                    <div class="date">February 2020 - May 2021</div>
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item">Led Android application development from concept to Play Store release, achieving 10,000+ downloads</li>
+                    <li class="achievement-item">Conducted security audits and API testing, identifying and resolving 15+ potential vulnerabilities</li>
+                    <li class="achievement-item">Transitioned from internship to full-time role after demonstrating exceptional capabilities in app development</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Noteworthy Projects -->
+        <div class="section">
+            <h2 class="section-title">NOTEWORTHY PROJECTS</h2>
+            
+            <!-- Project XYZ -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">Confidential DeFi Protocol (Stealth)</div>
+                    <div class="location">Remote</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Lead Smart Contract Developer</div>
+                    <div class="date">2022</div>
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item">Developed smart contracts enabling on-chain trading of shares with automatic win/loss distribution</li>
+                    <li class="achievement-item">Designed dynamic fee structure contract integrated with Gnosis Safe for secure fund management</li>
+                    <li class="achievement-item">Implemented whitelisting system with role-based permissions for regulated asset trading</li>
+                </ul>
+            </div>
+            
+            <!-- CryptoWave -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">CRYPTOWAVE</div>
+                    <div class="location">ETHIndia 2023</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Blockchain Engineer</div>
+                    <div class="date">2023</div>
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item">Built NFC payment system on Base chain with configurable on-chain spending limits</li>
+                    <li class="achievement-item">Integrated cross-chain contract messaging via Chainlink and LayerZero</li>
+                    <li class="achievement-item"><span class="expertise-category">Award:</span> Won Mantle "Best UX Track" Bounty at ETHIndia 2023</li>
+                </ul>
+            </div>
+            
+            <!-- Web3Rescue -->
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="org-name">WEB3RESCUE</div>
+                    <div class="location">ETHIndia 2022</div>
+                </div>
+                <div class="position-header">
+                    <div class="position">Lead Developer</div>
+                    <div class="date">2022</div>
+                </div>
+                <ul class="achievements">
+                    <li class="achievement-item">Developed Flashbots MEV solution to rescue funds from compromised wallets targeted by sweeper bots</li>
+                    <li class="achievement-item">Created gas sponsorship infrastructure enabling seamless token and NFT transfers</li>
+                    <li class="achievement-item"><span class="expertise-category">Achievement:</span> Finalist at ETHIndia 2022</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Education & Accolades -->
+        <div class="section">
+            <h2 class="section-title">EDUCATION & ACCOLADES</h2>
+            <ul class="achievements">
+                <li class="achievement-item"><span class="expertise-category">ICAICT-2021:</span> Best Paper Award for research on encrypted IPFS implementation with AES256</li>
+                <li class="achievement-item"><span class="expertise-category">NASA Space Apps Hackathon:</span> Zonal Winner (Maharashtra representative), 2019</li>
+            </ul>
+        </div>
+        
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">TECHNICAL SKILLS</h2>
+            <div class="skills-content">
+                <div class="skills-row">
+                    <div class="skills-category">Blockchain & Web3:</div>
+                    <div class="skills-list">Solidity, EVM, Cross-chain Protocols, OPStack, Defi Integrations, Smart Contract Security</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Programming & Frameworks:</div>
+                    <div class="skills-list">NodeJS (JavaScript), ExpressJS, NestJS, MongoDB, Elasticsearch, Strapi CMS, Matrix.org</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Blockchain Tools:</div>
+                    <div class="skills-list">Remix IDE, Foundry, Hardhat, IPFS</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Infrastructure & Other:</div>
+                    <div class="skills-list">AWS, Firebase, Bash, Unreal Engine (UE4), Arduino</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Frontend & Design:</div>
+                    <div class="skills-list">WordPress, Photoshop, CorelDraw, UI/UX Fundamentals</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
